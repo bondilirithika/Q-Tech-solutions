@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Recipe Finder</h1>
+    <input type="text" id="search-bar" placeholder="Search by ingredient or recipe name">
+  </header>
+
+  <main id="recipe-container">
+    <!-- Recipe Card Example -->
+    <div class="recipe-card" data-name="Spaghetti" data-ingredients="pasta,tomato,garlic">
+        <img src="images/spaghetti.jpg" alt="Spaghetti">
+        <h2>Spaghetti</h2>
+        <button class="toggle-recipe-btn">View Recipe</button>
+        <div class="recipe-details">
+          <p><strong>Ingredients:</strong> Pasta, Tomato Sauce, Garlic</p>
+          <p><strong>Steps:</strong> Boil pasta. Prepare tomato sauce. Mix and serve.</p>
+        </div>
+      </div>
+
+      <div class="recipe-card" data-name="Vegetable Stir-Fry" data-ingredients="broccoli,carrots,peppers,onion,soy-sauce">
+        <img src="images/stirfry.jpg" alt="Vegetable Stir-Fry">
+        <h2>Vegetable Stir-Fry</h2>
+        <button class="toggle-recipe-btn">View Recipe</button>
+        <div class="recipe-details">
+          <p><strong>Ingredients:</strong> Broccoli, Carrots, Bell Peppers, Onion, Soy Sauce, Olive Oil</p>
+          <p><strong>Steps:</strong> Stir-fry vegetables in hot oil, add soy sauce, cook until tender, and serve hot.</p>
+        </div>
+      </div>
+      
+      <div class="recipe-card" data-name="Pasta Carbonara" data-ingredients="pasta,eggs,cheese,bacon">
+        <img src="images/pasta-carbonara.jpg" alt="Pasta Carbonara">
+        <h2>Pasta Carbonara</h2>
+        <button class="toggle-recipe-btn">View Recipe</button>
+        <div class="recipe-details">
+          <p><strong>Ingredients:</strong> Pasta, Eggs, Parmesan Cheese, Bacon, Garlic</p>
+          <p><strong>Steps:</strong> Cook pasta. Fry bacon and garlic. Mix eggs and cheese. Combine all and serve with extra cheese.</p>
+        </div>
+      </div>
+      
+      <div class="recipe-card" data-name="Chicken Curry" data-ingredients="chicken,curry-powder,coconut-milk,onions,garlic">
+        <img src="images/chicken-curry.jpg" alt="Chicken Curry">
+        <h2>Chicken Curry</h2>
+        <button class="toggle-recipe-btn">View Recipe</button>
+        <div class="recipe-details">
+          <p><strong>Ingredients:</strong> Chicken, Curry Powder, Coconut Milk, Onions, Garlic, Ginger</p>
+          <p><strong>Steps:</strong> Brown chicken, cook onions, add spices, then add coconut milk. Simmer until thickened.</p>
+        </div>
+      </div>
+      
+      <div class="recipe-card" data-name="Chocolate Cake" data-ingredients="flour,sugar,cocoa-powder,eggs,milk">
+        <img src="images/chocolate-cake.jpg" alt="Chocolate Cake">
+        <h2>Chocolate Cake</h2>
+        <button class="toggle-recipe-btn">View Recipe</button>
+        <div class="recipe-details">
+          <p><strong>Ingredients:</strong> Flour, Sugar, Cocoa Powder, Eggs, Milk, Butter</p>
+          <p><strong>Steps:</strong> Mix dry ingredients, add wet ingredients, bake at 350°F for 30-35 minutes, and frost.</p>
+        </div>
+      </div>
+      
+      <div class="recipe-card" data-name="Tacos" data-ingredients="ground-beef,taco-shells,cheese,lettuce,tomato">
+        <img src="images/tacos.jpg" alt="Tacos">
+        <h2>Tacos</h2>
+        <button class="toggle-recipe-btn">View Recipe</button>
+        <div class="recipe-details">
+          <p><strong>Ingredients:</strong> Ground Beef, Taco Shells, Shredded Cheese, Lettuce, Tomato, Taco Sauce</p>
+          <p><strong>Steps:</strong> Cook beef, assemble tacos with toppings, and serve with salsa.</p>
+        </div>
+      </div>
+      
+
+    <!-- Add more recipes similarly -->
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
