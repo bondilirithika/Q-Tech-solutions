@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Product Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>My E-Commerce Store</h1>
+        <div class="cart-summary">
+            <span onclick="toggleCart()" class="cart-icon">🛒 Cart (<span id="cart-items">0</span>)</span>
+        </div>
+    </header>
+
+    <!-- Product Section -->
+    <section class="product-container">
+        <div class="product">
+            <img src="jeans.jpg" alt="Product 1">
+            <h2>Product 1</h2>
+            <p class="price">Rs.799</p>
+            <button onclick="addToCart('Product 1', 799, 'jeans.jpg')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="dress.jpg" alt="Product 2">
+            <h2>Product 2</h2>
+            <p class="price">Rs.999</p>
+            <button onclick="addToCart('Product 2', 999, 'dress.jpg')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="shoes.jpg" alt="Product 3">
+            <h2>Product 3</h2>
+            <p class="price">Rs.1500</p>
+            <button onclick="addToCart('Product 3', 1500, 'shoes.jpg')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSnCl55v8WzUm8gggWVwYlvshMKDhl_LgFx9AvzIzH8bJfZS85BdcJl8-Y62xa_x4UldOp6DUvb3287l53aKpuxu_F_UAfALE_39t0qRFzHiYRYahqGFMy1Mg" alt="Product 4">
+            <h2>Product 4</h2>
+            <p class="price">Rs.2500</p>
+            <button onclick="addToCart('Product 4', 2500, 'images/product3.jpg')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSvUXgehtaBI7-6ya1tudlVNt9sFQPX1O3HZjGVeZdetG3SGgAPL3tsqIb7lw7TDuN2ETol1e_gKkpsCSPW_VAgtvCF1WAm7Lc3N7odGYuX4L4n9v94BKjmqGU9ZFzFG8JIjkRH64bW&usqp=CAc" alt="Product 4">
+            <h2>Product 5</h2>
+            <p class="price">Rs.599</p>
+            <button onclick="addToCart('Product 5', 599, 'images/product3.jpg')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="data:image/webp;base64,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" alt="Product 4">
+            <h2>Product 6</h2>
+            <p class="price">Rs.550</p>
+            <button onclick="addToCart('Product 4', 550, 'images/product3.jpg')">Add to Cart</button>
+        </div>
+
+        
+    </section>
+
+    <!-- Cart Section -->
+    <div id="cart-panel" class="cart-panel hidden">
+        <h2>Your Cart</h2>
+        <ul id="cart-items-list"></ul>
+        <p class="total">Total: Rs.<span id="cart-total">0.00</span></p>
+        <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 My E-Commerce Store</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

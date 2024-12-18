@@ -1,0 +1,146 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #6c5ce7;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+.cart-summary {
+  cursor: pointer;
+}
+
+.cart-icon {
+  font-size: 1.2rem;
+  background-color: #fff;
+  color: #6c5ce7;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+/* Product Section */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.product {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 1rem;
+  width: 300px;
+  transition: transform 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.product h2 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.price {
+  color: #27ae60;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+button {
+  background-color: #6c5ce7;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #5a4de7;
+}
+
+/* Cart Panel */
+.cart-panel {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.cart-panel h2 {
+  margin-bottom: 1rem;
+}
+
+.cart-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.cart-panel li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.checkout-btn {
+  width: 100%;
+  background: #27ae60;
+  margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  margin-top: 1rem;
+}
