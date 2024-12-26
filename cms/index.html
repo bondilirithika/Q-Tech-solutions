@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role-Based CMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <button id="loginBtn">Login</button>
+        <button id="signupBtn">Sign Up</button>
+        <button id="logoutBtn" class="hidden">Logout</button>
+        <button id="addArticleBtn" class="hidden">Add Article</button>
+        <button id="viewArticlesBtn" class="hidden">View Articles</button>
+        <button id="manageUsersBtn" class="hidden">Manage Users</button>
+    </nav>
+    
+    <section id="loginSection">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="loginUsername">Username:</label>
+            <input type="text" id="loginUsername" required>
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <section id="signupSection" class="hidden">
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <label for="signupUsername">Username:</label>
+            <input type="text" id="signupUsername" required>
+            <label for="signupPassword">Password:</label>
+            <input type="password" id="signupPassword" required>
+            <label for="signupRole">Role:</label>
+            <select id="signupRole" required>
+                <option value="Viewer">Viewer</option>
+                <option value="Editor">Editor</option>
+                <option value="Admin">Admin</option>
+            </select>
+            <button type="submit">Sign Up</button>
+        </form>
+    </section>
+
+    <section id="addArticleSection" class="hidden">
+        <h2>Add Article</h2>
+        <form id="addArticleForm">
+            <label for="articleTitle">Title:</label>
+            <input type="text" id="articleTitle" required>
+            <label for="articleContent">Content:</label>
+            <textarea id="articleContent" rows="5" required></textarea>
+            <label for="articleImage">Image:</label>
+            <input type="file" id="articleImage" accept="image/*">
+            <button type="submit">Add Article</button>
+        </form>
+    </section>
+
+    <section id="viewArticlesSection" class="hidden">
+        <h2>Articles</h2>
+        <ul id="articlesList"></ul>
+    </section>
+
+    <section id="manageUsersSection" class="hidden">
+        <h2>Manage Users</h2>
+        <ul id="usersList"></ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
