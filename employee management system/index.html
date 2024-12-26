@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Employee Management System</h1>
+  </header>
+
+  <main>
+    <!-- Tab Navigation -->
+    <nav class="tabs">
+      <button id="addEmployeeTab" class="active-tab">Add Employee</button>
+      <button id="employeeDetailsTab">Employee Details</button>
+    </nav>
+
+    <!-- Add Employee Section -->
+    <div id="addEmployeeSection" class="tab-section active">
+      <h2>Add Employee</h2>
+      <form id="employeeForm">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Enter Employee Name" required>
+        </div>
+        <div class="form-group">
+          <label for="id">Employee ID:</label>
+          <input type="text" id="id" placeholder="Enter Employee ID" required>
+        </div>
+        <div class="form-group">
+          <label for="department">Department:</label>
+          <input type="text" id="department" placeholder="Enter Department" required>
+        </div>
+        <div class="form-group">
+          <label for="role">Role:</label>
+          <select id="role" required>
+            <option value="">Select Role</option>
+            <option value="Manager">Manager</option>
+            <option value="Developer">Developer</option>
+            <option value="HR">HR</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="salary">Salary:</label>
+          <input type="number" id="salary" placeholder="Enter Salary" required>
+        </div>
+        <div class="form-group">
+          <label for="attendanceDate">Attendance Date:</label>
+          <input type="date" id="attendanceDate" required>
+        </div>
+        <div class="form-group">
+          <label for="attendanceStatus">Attendance:</label>
+          <select id="attendanceStatus" required>
+            <option value="">Select Attendance</option>
+            <option value="Present">Present</option>
+            <option value="Absent">Absent</option>
+          </select>
+        </div>
+        <button type="submit" class="btn">Add Employee</button>
+      </form>
+    </div>
+
+    <!-- Employee Details Section -->
+    <div id="employeeDetailsSection" class="tab-section hidden">
+      <h2>Employee Details</h2>
+
+      <!-- Collapsible Filter Panel -->
+      <button id="toggleFilters" class="btn filter-toggle">Toggle Filters</button>
+      <div id="filters" class="hidden">
+        <select id="filterRole">
+          <option value="">Filter by Role</option>
+          <option value="Manager">Manager</option>
+          <option value="Developer">Developer</option>
+          <option value="HR">HR</option>
+        </select>
+        <select id="filterAttendance">
+          <option value="">Filter by Attendance</option>
+          <option value="Present">Present</option>
+          <option value="Absent">Absent</option>
+        </select>
+      </div>
+
+      <!-- Employee Table -->
+      <table class="employee-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>ID</th>
+            <th>Department</th>
+            <th>Role</th>
+            <th>Salary</th>
+            <th>Attendance</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="employeeTableBody">
+          <!-- Dynamic Content -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
